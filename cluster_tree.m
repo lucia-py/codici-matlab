@@ -13,7 +13,7 @@ else
     Ts=cluster_tree(sx,q);
     Td=cluster_tree(dx,q);
 
-    T=[{idx},Ts,Td];
+    T=[Ts,Td];
 end
 end
 
