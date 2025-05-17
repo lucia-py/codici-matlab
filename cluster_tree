@@ -1,0 +1,28 @@
+function [T,h]=cluster_tree(idx,q)
+%idx: vettore indici 1:N
+%q: numero momenti nulli
+%h: altezza albero
+
+
+
+  if length(idx) <= q+1
+      T=idx;
+      h=0;
+    
+  else
+    m=floor(length(idx)/2);
+    sx=idx(1:m);
+    dx=idx(m+1:end);
+    [T_sx, h_sx] = cluster_tree(sx, q);
+    [T_dx, h_dx] = cluster_tree(dx, q);
+
+    T = struct();
+    T.sx  = T_sx;
+    T.dx  = T_dx;
+    T.idx = idx;
+
+    h = 1 + max(h_sx, h_dx);   % altezza corrente
+  end
+  
+end
+
