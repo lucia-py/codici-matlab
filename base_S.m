@@ -12,7 +12,7 @@ Sa=[];
 clusters=flatten_tree(T);
 L=numel(clusters);
 Q_cell=cell(L,1);
-
+%Q_cell: contiene la matrice Q per ogni cluster(decomposizione QR di M per il clsuter corrente)
 for k=L:-1:1
     idx=clusters{k};
     n=numel(idx);
