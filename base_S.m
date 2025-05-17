@@ -40,6 +40,8 @@ for k=L:-1:1
         Q_cell{k}=Q;
     end
 end
+disp(size(Sc));
+disp(size(Sa));
 %mi assicuro che B sia quadrata
 B=[Sc;Sa];
 if size(B,1)>N
