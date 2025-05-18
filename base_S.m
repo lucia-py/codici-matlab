@@ -48,7 +48,7 @@ for k=L:-1:1
         end
         Q_cell{k}=Q;
     end
-end
+end&ultimo posizonamento end, qui finisce ciclo for
 
 
 %mi assicuro che B sia quadrata
