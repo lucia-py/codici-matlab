@@ -18,10 +18,8 @@ for k=1:1:L
     n=numel(idx);
 
     if n<=q+1
-        disp(x(idx))
-        for t=1:n
-        Sc(k,t)=x(idx);
-        end
+        %disp(x(idx));
+        Sc=x(idx);
         Q_cell{k}=eye(n);
     else
         M=ones(q+1,n);
